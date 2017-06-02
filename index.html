@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player com Javascript</title>
+	<link rel="stylesheet" type="text/css" href="plugin/css/style.css"> <!-- carregando css do plugin -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- carregando meu estilo de pagina -->
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script> <!-- carregando primeiro jquery -->
+    <script type="text/javascript" src="plugin/jquery-jplayer/jquery.jplayer.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="plugin/ttw-music-player-min.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="js/myplaylist.js"></script> <!-- carregando js criado para playlist -->
+
+   <!-- inicializando o plugin -->
+    <script type="text/javascript">
+    	// funcao criada para descricao- texto a ser apresentado na pagina
+        $(document).ready(function(){ 
+            var description = 'Cantor, compositor e instrumentista, Thiaguinho é um dos mais versáteis e criativos artistas brasileiros. Seu estilo musical é moderno e diferente. Ele transmite em suas composições a influência de tudo o que ouve. Os ritmos R&B, funk, pop, se fazem presentes nas suas composições criando uma identificação natural com o público jovem. Thiaguinho, hoje, é uma referência e um modelo aspiracional para este público, que se espelha na sua trajetória.';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, //autoplay sem inicializar com play
+                description:description,
+                jPlayer:{
+                    swfPath:'plugin/jquery-jplayer' //diretorio do plugin para carregar
+                }
+            });
+        });
+  
+
+    </script>
+</head>
+<body>
+<div class="logo"></div> <!-- criando div para carregar logo via css -->
+</body>
+</html>
